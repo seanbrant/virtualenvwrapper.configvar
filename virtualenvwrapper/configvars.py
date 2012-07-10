@@ -74,7 +74,7 @@ def pre_activate(args):
     loader.load(os.path.join(base, project, '.env'))
 
 
-def post_activate_source(args):
+def pre_activate_source(args):
     return loader.source()
 
 
