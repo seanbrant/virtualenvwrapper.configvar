@@ -68,8 +68,10 @@ class Loader(object):
 loader = Loader()
 
 
-def post_activate(args):
-    loader.load(os.path.join(os.environ['OLDPWD'], '.env'))
+def pre_activate(args):
+    project = args[0]
+    base = os.environ.get('PROJECT_HOME', os.environ.get('WORKON_HOME'))
+    loader.load(os.path.join(base, project, '.env'))
 
 
 def post_activate_source(args):

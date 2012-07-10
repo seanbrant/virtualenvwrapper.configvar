@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='virtualenvwrapper.configvar',
-    version='0.0.1',
+    version='0.0.2',
     description='Plugin for virtualenvwrapper to automatically '
                 'export config vars found in your project level '
                 '.env file.',
@@ -18,8 +18,8 @@ setup(
         'virtualenvwrapper>=2.11',
     ],
     entry_points={
-        'virtualenvwrapper.post_activate': [
-            'configvars = virtualenvwrapper.configvars:post_activate',
+        'virtualenvwrapper.pre_activate': [
+            'configvars = virtualenvwrapper.configvars:pre_activate',
         ],
         'virtualenvwrapper.post_activate_source': [
             'configvars = virtualenvwrapper.configvars:post_activate_source',
