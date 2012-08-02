@@ -49,7 +49,7 @@ class Loader(object):
 
     def _parse(self, content):
         lines = content.splitlines()
-        pairs = [trim(*line.split('=')) for line in lines if line.strip()]
+        pairs = [trim(*line.split('=', 1)) for line in lines if line.strip()]
 
         for key, value in pairs:
             if key in os.environ:
