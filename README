@@ -1,6 +1,6 @@
 Since virtualenvwrapper.configvar is a plugin it requires a properly working virtualenvwrapper
 to work. Configvar works with your foreman compatable `.env` file and will export the contents
-whenever you run `workon`. Your `.env` file should be found at `$PROJET_HOME/<env_name>/.env`
+whenever you run `workon`. Your `.env` file should be found at `$PROJECT_HOME/<env_name>/.env`
 or `$WORKON_HOME/<env_name>/.env`.
 
 
